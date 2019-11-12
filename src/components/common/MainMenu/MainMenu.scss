@@ -1,0 +1,25 @@
+@import "../../../styles/variables";
+
+.main-menu {
+  list-style: none;
+
+  li {
+    a {
+      display: block;
+      padding: 16px 40px;
+      color: #757575;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpointMD) {
+  .main-menu {
+    display: flex;
+  }
+}

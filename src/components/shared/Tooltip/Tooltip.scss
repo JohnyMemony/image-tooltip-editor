@@ -1,0 +1,78 @@
+.tooltip-wrap {
+  position: absolute;
+  z-index: 300;
+  left: 0;
+  top: 0;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  user-select: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  &__message {
+    white-space: nowrap;
+  }
+
+  &--top {
+    margin-top: -12px;
+    transform: translate(-50%, -100%);
+
+    &::before {
+      top: 100%;
+      left: 50%;
+      margin-left: -3px;
+      border-width: 6px 5px 0 5px;
+      border-color: #ffffff transparent transparent transparent;
+    }
+  }
+
+  &--bottom {
+    margin-top: 12px;
+    transform: translate(-50%, 0);
+
+    &::before {
+      bottom: 100%;
+      left: 50%;
+      margin-left: -3px;
+      border-width: 0 5px 6px 5px;
+      border-color: transparent transparent #ffffff transparent;
+    }
+  }
+
+  &--left {
+    margin-left: -12px;
+    transform: translate(-100%, -50%);
+
+    &::before {
+      top: 50%;
+      left: 100%;
+      margin-top: -3px;
+      border-width: 5px 0 5px 6px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+  }
+
+  &--right {
+    margin-left: 12px;
+    transform: translate(0, -50%);
+
+    &::before {
+      top: 50%;
+      right: 100%;
+      margin-top: -3px;
+      border-width: 5px 6px 5px 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
+  }
+}

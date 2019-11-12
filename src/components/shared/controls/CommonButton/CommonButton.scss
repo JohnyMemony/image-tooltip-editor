@@ -1,0 +1,17 @@
+@import "../../../../styles/variables";
+
+.common-btn {
+  height: 30px;
+  min-width: 80px;
+  padding: 0 15px;
+  border-radius: 3px;
+  color: #ffffff;
+  border: 1px solid #37474f;
+  background-color: #37474f;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+}

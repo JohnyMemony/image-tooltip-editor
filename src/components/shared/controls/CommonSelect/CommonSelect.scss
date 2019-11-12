@@ -1,0 +1,15 @@
+@import "../../../../styles/variables";
+
+.common-select {
+  &__placeholder {
+    margin-bottom: 10px;
+  }
+
+  select {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid $mainGreyCol;
+    background-color: transparent;
+  }
+}
